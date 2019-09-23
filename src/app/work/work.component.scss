@@ -1,0 +1,97 @@
+@import "../../styling/variable.scss";
+
+.work-page{
+    background: url(../../assets/header-bg.png) no-repeat 100% bottom;
+    background-size: cover;
+  }
+
+.site-work{
+    padding:80px 0 150px;
+    @media only screen and (max-width: $screen900){
+     padding:80px 0;
+   }
+   @media only screen and (max-width: $screen767){
+     padding:0 0 80px 0;
+   }  
+   .sec-title{
+    p{
+      color: $color1;
+      font-weight: $font-semibold;
+    }
+  }   
+  .work-step{
+    &:not(:last-child){
+      margin-bottom:120px;
+      @media only screen and (max-width: $screen991){
+        margin-bottom:80px;
+      }
+      @media only screen and (max-width: $screen767){
+        margin-bottom:40px;
+      }      
+    }
+  }
+  .work-text{
+    @media only screen and (max-width: $screen900){
+      margin-left:0 !important;
+    }
+    @media only screen and (max-width: $screen767){
+      margin-top:30px;
+    }      
+    li{
+      position: relative;
+      padding-left: 40px;
+      svg{
+        position: absolute;
+        left: 0;
+        
+      }
+      span{
+        color: $color1;
+        font-weight:$font-extra;
+        font-size: $font20;
+        line-height: $line-height30;
+        @media only screen and (max-width: $screen991){
+          font-size: $font18;
+        }        
+      }
+    }
+    h5{
+      color: $color1;
+      font-weight:$font-medium;
+      font-size: $font28;
+      line-height: $line-height34;
+      margin-left: 15px;
+      @media only screen and (max-width: $screen991){
+        font-size: $font22;
+        line-height: $line-height28;
+      }
+    }
+    p{
+      color: $color7; 
+      font-weight: $font-regular; 
+      font-size: $font18;  
+      line-height: $line-height22;
+      margin:10px 0 0 0px;
+      @media only screen and (max-width: $screen991){
+        margin:10px 0 0 0;
+      }
+    }
+  }
+  .brokers-img{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background-color: $bgcolor2;
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,0.1);
+    padding: 20px;        
+    margin:0 0 15px 0;
+    max-width: 100%;
+    width: 240px;
+    text-align: center;
+    max-height: 100%;
+    height: 100px;
+    img{
+      display:block;
+      margin:0 auto;
+    }
+  }
+}

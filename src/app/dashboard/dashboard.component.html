@@ -1,0 +1,187 @@
+<section class="site-dashboard">
+  <div class="container-fluid">
+    <h1 class="wow fadeInLeft animated">Dashboard</h1>
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        <div class="dashboard-column">
+          <div class="dashboard-box d-flex align-item-center justify-content-between">
+            <h2 class="wow zoomIn animated">Your profile</h2>
+            <div class="edit-btn btn-bg">
+              <a href="#">Edit</a>
+            </div>
+          </div>
+          <div class="dashboard-inner d-flex">
+            <div class="dashboard-left">
+              <img src="../../assets/user.png" alt="user" class="" title="">
+            </div>
+            <div class="dashboard-right">
+              <p>Name,Surname</p>
+              <h3>Gints Ziverts</h3>
+              <p>Phone</p>
+              <h6>+371 2377 3137</h6>
+              <p>Email</p>
+              <a href="#">me@ziverts.design</a>
+              <p>Address</p>
+              <h6>Terbatas street 4, Riga, Latvia LV1050</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="dashboard-column">
+          <div class="dashboard-box d-flex align-item-center justify-content-between">
+            <h2 class="wow zoomIn animated">Your Al.t.bot</h2>
+          </div>
+          <button type="button" class="bot-btn btn-bg" id="modalToggle" (click)="openModalDialog()" >
+            Create your Al.t.bot now
+          </button>
+
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="dashboard-column">
+          <div class="dashboard-box d-flex align-item-center justify-content-between">
+            <h2 class="wow zoomIn animated">Payment methods</h2>
+          </div>
+          <div class="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true"
+  [ngStyle]="{'display':display}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close closefirstmodal" aria-label="Close" (click)="openModalPopup()">
+        <span aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" version="1.1"
+            height="24" viewBox="0 0 64 64" enable-background="new 0 0 64 64" style="opacity:0.5;">
+            <g>
+              <path fill="#FBFCFF"
+                d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z" />
+            </g>
+          </svg>
+        </span>
+      </button>
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="wizard-title">Al.t.bot setup</h5>
+      </div>
+      <div class="modal-body">
+          <aw-wizard>
+              <aw-wizard-step stepTitle="Title of step 1">
+                  <div class="form-group popup-radio step-1">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Setup your bot manualy
+                        </label>
+                        <p class="radio-txt">Adjust sliders to create your custom bot performance.</p>
+                        <div class="popup-progressbar">
+                          <div class="hero-progress">
+                    <div class=" mb-4 hero-progressbar" data-percentage="10%">
+                      <p>Investment</p>
+                      <ng5-slider [(value)]="value" [options]="options" class="slider slider-horizontal"></ng5-slider>
+                    </div>
+                    <div class="mb-4 hero-progressbar" data-percentage="20%">
+                      <p>Max. perform</p>
+                      <ng5-slider [(value)]="value2" [options]="options2" class="slider slider-horizontal"></ng5-slider>
+                    </div>																			
+                </div>
+                <div class="d-flex justify-content-between invest-txt">
+                    <div class="slider-txt">
+                      <p>Estimated profit:</p>
+                      <h5>$ 2450</h5>
+                    </div>
+                    <div class="slider-txt">
+                      <p>Max historical drawdown:</p>
+                      <h5>12 %</h5>
+                    </div>
+                  </div>
+                        </div>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Use our auto presets
+                        </label>
+                        <p class="radio-txt">You can always change this at any time.</p>
+                        <div class="popup-progressbar">
+                            <h2>Hello World</h2>
+                        </div>
+                      </div>
+                  </div>                  
+                  <button awNextStep class="btn btn-secondary btn-bg d-flex justify-content-end" id="infoContinue">Go to Brokers</button>                  
+              </aw-wizard-step>
+              <aw-wizard-step stepTitle="Title of step 2">
+                  <div class="form-group form-wrap step-2">
+                      <label>Choose your broker</label>
+                      <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                   
+                    <div class="form-group">
+                      <label>Enter your account number</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                  
+                  <button awNextStep class="btn btn-secondary btn-bg d-flex justify-content-end" id="adsContinue">Go to payments</button>
+                  
+                </div>
+              </aw-wizard-step>
+              <aw-wizard-step stepTitle="Title of step 3">
+                <div class="step-3">
+                  <h4>Choose payment gateway</h4>
+            <p>After choosing payment gateway, you will be redirected to their site for payment processing, once payment is recieved, you will be notified in email.</p>
+            <div class="payment">
+                <ul class="d-flex align-item-center">
+                  <li>
+                    <a href="#"><img src="../../assets/paypal.png" alt="paypal-logo" class="" title=""></a>
+                  </li>
+                  <li class="ml-5">
+                    <a href="#"><img src="../../assets/paypal.png" alt="paypal-logo" class="" title=""></a>
+                  </li>                  
+                </ul>
+            </div>
+            </div>
+
+                  <button awNextStep class="btn btn-secondary btn-bg d-flex justify-content-end" id="placementContinue">Go to Brokers</button>
+              </aw-wizard-step>
+              <aw-wizard-step stepTitle="Title of step 4">
+                <div class="step-4">
+                  <h4>Complete.</h4>
+            <p>Give us time to process the payment and devliver your new Al.t.bot.It could take up to 2 working days.<br> If you do not recieve any info from us within this time, please let us know by sending us email at <strong>support@altbot.com</strong> or call us at <strong>+371 2377 3137</strong></p>
+            <h3 class="text-center">Thank you, for choosing Al.t.bot!</h3>
+            </div>
+
+              </aw-wizard-step>
+          </aw-wizard>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Warning" class="modal fade" role="dialog" data-backdrop="false" [ngStyle]="{'display':DISPLAY}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <h3 class="text-center">Cancel setup</h3>
+        <p class="text-center">Are you sure, you want to exit the setup stage?</p>
+        <div class="d-flex justify-content-between mt-5">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onClosePopup()">No,
+            Stay</button>
+          <button type="button" class="btn btn-danger confirmclosed" (click)="closeAllPopup()">Yes, Exit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,100 @@
+@import "../../styling/variable.scss";
+
+.site-points{
+    padding:160px 0;
+    @media only screen and (max-width: $screen900){
+      padding:110px 0;
+    }    
+    @media only screen and (max-width: $screen540){
+      padding:50px 0;
+    }
+    .sec-title{
+      .oval{
+        background-color: $bgcolor4;
+      }
+    }  
+    .points-box{
+      &:not(:last-child){
+        margin-bottom:120px;
+      }
+    }
+    .points-column{
+      margin-top:80px;
+      @media only screen and (max-width: $screen540){
+        margin-top:40px;
+      }
+      .point-img{
+        img{
+          display:block;
+        }
+      }
+      .point-text{
+        max-width: 100%;
+        width: 500px;
+        margin: 0 auto;
+        @media only screen and (max-width: $screen900){
+          margin:50px auto 0;
+        } 
+        h3{
+          color: $color6;
+          font-size: $font40;
+          line-height: $line-height44;
+          font-weight:$font-semibold;
+          margin-bottom: 15px;    
+          @media only screen and (max-width: $screen900){
+            font-size:$font28;
+            line-height: $line-height34;
+            margin-bottom: 10px;
+          }          
+        }
+        p{
+          color: $color6;
+          font-size: $font20;
+          line-height: $line-height30;
+          font-weight:$font-regular;
+          @media only screen and (max-width: $screen900){
+            font-size:$font18;
+            line-height: $line-height24;
+          }          
+        }
+        .point-list{
+          li{
+            position:relative;
+            padding-left: 36px;
+            &:not(:last-child){
+              margin-bottom:15px;
+            }
+            &:before{
+              content: "";            
+              height: 16px;
+              width: 73px;
+              background-color: $bgcolor4;
+              position: absolute;
+              left: 0;
+              top: 7px;
+              z-index: -1;
+              @media only screen and (max-width: $screen900){
+                height:15px;
+                top:5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: $screenup768){
+      .points-box:nth-child(even){
+        .col-left{
+          order:2;
+        }
+        .col-right{
+          order:1;
+        }
+      }
+    } 
+    .points-box:first-child{
+      .point-img{
+        box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }

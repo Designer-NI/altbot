@@ -1,0 +1,114 @@
+@import "../../styling/variable";
+.contact-page{
+    background: url(../../assets/header-bg.png) no-repeat 100% bottom;
+    background-size: cover;
+  }
+.site-contact{
+    /*padding: 237px 0 0;    */
+    margin: -12% 0 200px 0;
+    @media only screen and (max-width: $screen1539){
+      margin:-18% 0 100px 0;
+    }  
+    @media only screen and (max-width: $screen540){
+      margin:-18% 0 100px 0;
+    }
+    /*.container{
+      position:relative;
+    }*/
+    .contact-box .form-wrap .form-control,.contact-box .form-wrap textarea {
+      border: 1px solid rgba(58, 64, 90, 0.1);
+      border-radius: 27px;
+      background-color: #EEF0F2;
+      box-shadow: 0 12px 24px 0 rgba(11, 19, 43, 0.1);
+      margin-bottom: 24px;
+      padding: 26px 20px;
+    }
+    .contact-box .form-wrap textarea{
+      padding: 20px;
+    }
+    
+    .contact-box{
+      border-radius: 40px;
+      background-color: $bgcolor2;
+      box-shadow: 0 12px 32px 0 rgba(0,0,0,0.15);
+      padding: 50px;
+      /*max-width: 100%;
+      width: 1140px;*/
+      /*position: absolute;*/
+      /*left: inherit;*/
+      min-width: 290px;
+      /*top: -500px;*/
+      /*@media only screen and (max-width: $screen1080){
+        left:0;
+      }*/
+      @media only screen and (max-width: $screen540){
+        /*width:100%;*/
+        /*left: 0;*/
+        padding: 30px 15px;
+        /*top:-220px;*/
+      }
+      h2{
+        color: $color1;
+        font-weight: $font-semibold;  
+        font-size: $font40;  
+        line-height: $line-height44;  
+        text-align: center;
+        margin-bottom:50px;
+        @media only screen and (max-width: $screen540){
+          margin-bottom:30px;
+          font-size: $font24;  
+          line-height: $line-height26; 
+        }
+      }   
+      h4{
+        color: $color7; 
+        font-weight: $font-regular; 
+        font-size: $font20;
+        line-height: $line-height26;
+        margin-bottom: 20px;   
+        @media only screen and (max-width: $screen540){
+          font-size: $font16;
+          line-height: $line-height22;
+        }   
+      }
+      .dot{
+        height: 18px;
+        width: 18px;
+        background-color: $bgcolor1;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+        margin:16px 0;
+      }
+      p{
+       color: $color7; 
+       font-weight: $font-bold;   
+       font-size: $font18;
+       line-height: $line-height32;      
+     }
+   }
+  }
+  .btn-groups{
+  .btn-submit{
+    border: 1px solid rgba(11,19,43,0.1);
+    border-radius: 25px;
+    background-color: $bgcolor1;
+    box-shadow: 0 12px 24px 0 rgba(11,19,43,0.1);
+    padding: 12px 55px;  
+    cursor:pointer;
+    text-align: center;
+    margin-bottom: 0;
+    
+      color:$color2;
+      font-weight: $font-semibold;
+      font-size: $font16;
+      line-height: $line-height24;
+       
+    &:hover{
+      background: $bgcolor5;
+      border-color: $bordercolor5;        
+    }
+    @media only screen and (max-width: $screen375){
+      margin-top:15px;
+    }
+  }}

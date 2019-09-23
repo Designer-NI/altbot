@@ -1,0 +1,90 @@
+@import "../../styling/variable.scss";
+
+.site-footer{
+    background-color:$bgcolor7;
+    padding-top:50px;
+    p{
+      color: $color2;    
+      font-size: $font12;
+      line-height: $line-height18;
+      text-align: center;
+      font-weight:$font-regular;
+      margin-top: 60px;
+      padding-bottom: 20px;
+      @media only screen and (max-width: $screen900){
+        margin-top:50px;
+      }
+    }
+    .footer-logo{
+      width:230px;
+      display:block;
+      @media only screen and (max-width: $screen375){
+        width:140px;
+      }
+    }
+    .footer-link{
+      li{
+        margin-top:24px;
+        a{
+          color:$color2;
+          font-size: $font16;
+          line-height: $line-height34;
+          font-weight:$font-regular;
+          position: relative;
+          &:after{
+              content: '';
+              border-bottom: 1px solid transparent;
+              width: 0px;
+              position: absolute;
+              bottom: -4px;
+              left: 0;
+          }
+          &:hover{
+            &:after{
+              border-bottom: 1px solid $bordercolor2;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .payment-link{
+      span{
+          color: rgba(251, 252, 255, 0.5);
+          font-size: $font16;
+          line-height: $line-height20;
+          font-weight:$font-regular;
+      }
+      .payment-logo{
+          width: 100px;
+          margin-left: 24px;
+          @media only screen and (max-width: $screen1024){
+            margin-left:15px;
+          }
+      }
+      .telegram-logo{
+          width: 34px;
+          margin-left:24px;
+      }
+    }
+    @media only screen and (max-width: $screen900){
+      .col-md-5{
+          max-width: 100%;
+          flex: 0 0 100%; 
+      }
+      .col-md-2,.col-md-3{
+        max-width: 33.33%;
+        flex: 0 0 33.33%;       
+      }
+    } 
+    @media only screen and (max-width: $screen767){
+      .col-md-3{
+          max-width: 100%;
+          flex: 0 0 100%; 
+      }
+      .col-md-2{
+        max-width: 50%;
+        flex: 0 0 50%;       
+      }
+    }   
+  }

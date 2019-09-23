@@ -1,0 +1,82 @@
+<div class="blog-page site-hero-bg">
+    <div class="site-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="hero-left wow fadeInLeft animated">
+						<h1>Get in on the discussion in our <span>Live blog</span></h1>
+						<p>Get in on the action, learn <span>cool tips and tricks</span>, “how tos” and ask guestions, find right answers - all within our live community.</p>						
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<div class="form-wrap blog-search">
+		<div class="container">
+		<form>
+			<input type="search" name="q" id="search-field" value="" placeholder="Search for your topic here...">
+			<div class="search-btn btn-bg">
+				<a href="">Go</a>
+			</div>			
+		</form>
+	</div>
+	</div>
+</div>
+
+<section class="site-blog" >
+	<div class="container">
+		<div class="sec-title" *ngFor='let title of blogtitle'>
+			<div class="oval wow zoomIn animated"></div>
+			<h3 class="wow zoomIn animated"><a href="blog-detail.html">{{title.t1}}</a></h3>
+			<p class="text-center text-sm-left wow zoomIn animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo… <a routerLink='/blog-detail'>Read all</a></p>
+			<div class="dots"></div>
+			<h5>30 April 2019</h5>
+			<ul class="tags">
+				<li *ngFor='let tag of tags'><a href="#">{{tag.tag1}}</a><li>
+			</ul>
+		</div>	
+				
+		<div class="pagination justify-content-center">
+			<nav aria-label="Page navigation example">
+			  <ul class="pagination align-items-center">
+			    <li class="page-item btn-prev btn">
+			    	<a class="page-link" href="#">
+			    		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999; transform: rotate(180deg);" xml:space="preserve">
+						<path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z" fill="#e4e4e4"/>
+						<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+						</svg>
+			    	</a>
+			    </li>
+			    <li class="page-item active"><a class="page-link" href="#"></a></li>
+			    <li class="page-item"><a class="page-link" href="#"></a></li>
+			    <li class="page-item"><a class="page-link" href="#"></a></li>
+			    <li class="page-item btn-next btn">
+			    	<a class="page-link" href="#">
+			    		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve">
+						<path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z" fill="#e4e4e4"/>
+						<g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+						</svg>			    		
+			    	</a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+	</div>
+</section>
+
+<section class="site-newsletter">
+	<div class="container">
+		<div class="newsletter-box">
+			<h2 class="wow zoomIn animated">Sign up for our newsletter</h2>
+			<h6 class="wow zoomIn animated">Sign up and get latest news, promotions and much more.<br>No worries, we will send you <span>only important</span> stuff.</h6>
+			<div class="form-wrap">
+				<form>
+					<input type="email" name="q" id="search-field-1" value="" placeholder="Your email here...">
+					<div class="search-btn btn-bg">
+						<a href="">Sign up</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

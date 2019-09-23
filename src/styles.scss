@@ -1,0 +1,774 @@
+@import "../src/styling/variable.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/*  em, strong, button, blockquote, small, strike, sub, sup, tt,  */
+*, *:before, *:after {box-sizing: border-box;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  list-style:none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  vertical-align: baseline;  
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+img{
+	max-width:100%;
+}
+a:hover{
+  text-decoration: none;
+}
+
+/*-----------------Common end-----------------*/
+
+
+  /*-----------------Button Mixin end-----------------*/
+    
+  .sec-title{
+      text-align: center;
+      .oval{
+        height: 16px;
+        width: 16px;
+        background-color: $bgcolor1;
+        border-radius: 50%;
+        text-align: center;
+        display: inline-block;
+      }
+      h3{
+          color: $color3;        
+          font-size: $font54;
+          line-height: $line-height64;
+          margin-bottom: 24px;
+          font-weight:$font-semibold;
+          @media only screen and (max-width: $screen900){
+            font-size:$font46;
+            line-height: $line-height52;
+          } 
+          @media only screen and (max-width: $screen540){
+            font-size:$font30;
+            line-height: $line-height36;
+            br{
+              display: none;
+            }
+          }         
+      }
+      p{
+          color: $color6;
+          font-size: $font24;
+          line-height: $line-height32;
+          max-width: 100%;
+          width: 1030px;
+          margin: 0 auto 60px;
+          @media only screen and (max-width: $screen900){
+            font-size:$font20;
+            line-height: $line-height28;
+            margin:0 auto 48px;
+          } 
+          @media only screen and (max-width: $screen540){
+            font-size:$font18;
+            line-height: $line-height24;
+            margin:0 auto 26px;
+          }                  
+      }
+  }
+  .form-wrap{
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="search"],  
+    input[type="datetime-local"],
+    input[type="tel"],
+    textarea,
+    select{
+      appearance: none;
+      background-color: $bgcolor2;
+      border-radius:44px;
+      -webkit-border-radius:44px;
+      -moz-border-radius:44px;
+      border: transparent;
+      box-shadow:none;
+      display: block;
+      font-size: 14px;  
+      line-height: 52px;
+      max-width: 100%;
+      outline: none;
+      padding: 0 20px;
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;  
+    }
+    @media (max-width:480px){
+      .form-wrap{
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="search"],      
+        input[type="datetime-local"],
+        input[type="tel"],
+        textarea,
+        select {
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  .container{
+    max-width: 1280px !important;
+  }
+  @mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+  }
+  @include placeholder {
+    color: rgba(58,64,90,0.6);  
+    font-weight: Poppins-regular; 
+    font-size: $font18;  
+    line-height: $line-height22;  
+  }
+
+  /*-----------------Common end-----------------*/
+
+  .site-hero{
+    padding-top:95px;
+    position:relative;
+    padding-bottom: 95px; 
+    .hero-left{
+      margin-bottom:140px;
+      // margin-right: 98px;
+      @media only screen and (max-width: $screen900){
+        margin-bottom:100px;
+      }
+      @media only screen and (max-width: $screen540){
+        margin-bottom:50px;
+      }    
+      h1{
+        color: $color2;       
+        font-size: $font54; 
+        line-height: $line-height60;
+        margin-bottom:46px;
+        font-weight: $font-semibold;
+        span{
+          position:relative;
+          z-index:1;
+          &:before{
+            height: 44px;
+            width: 100%;
+            background-color: $bgcolor5;
+            position: absolute;
+            left: 0;
+            content: "";
+            top: 14px;
+            z-index: -1;
+            @media only screen and (max-width: $screen540){
+              height:28px;
+              top:9px;
+            }          
+          }  
+        }
+        @media only screen and (max-width: $screen900){
+          font-size:$font46;
+          line-height:$line-height48;
+        }
+        @media only screen and (max-width: $screen540){
+          font-size:$font36;
+          line-height:$line-height40;
+          margin-bottom: 30px;
+        }      
+      }
+      p{
+        color: $color9;
+        font-size: $font24;
+        line-height: $line-height30;
+        font-weight: $font-regular;
+        margin-bottom: 15px;
+        span{
+          position:relative;
+          z-index:1;
+          &:before{
+            height: 20px;
+            width: 100%;
+            background-color: $bgcolor5;
+            position: absolute;
+            left: 0;
+            content: "";
+            top: 6px;
+            z-index: -1;
+            @media only screen and (max-width: $screen900){
+              height:16px;
+              top:3px;
+            }           
+          }  
+        }    
+        @media only screen and (max-width: $screen900){
+          font-size:$font20;
+          line-height:$line-height26;
+        }  
+        @media only screen and (max-width: $screen540){
+          font-size:$font16;
+          line-height:$line-height22;
+        }       
+      }
+    }
+    .slide-logo{
+      @media only screen and (max-width: $screen900){
+        margin-bottom:30px !important;
+      }
+    }
+  }
+/*-----------------Page css-----------------*/
+  .register-page{
+      background-color:$bgcolor1;
+      max-height: 100%;
+      height: 760px;
+      position: relative;
+      .container{
+        top: 50%;
+        left: 50%;
+        transform:translate(-50% , -50%);
+        position: absolute;
+      }
+    
+    .site-hero{
+      padding-bottom:0;   
+      margin:0;
+      padding-top: 0;
+    }
+  }
+  .dashboard-page{
+    .site-header{
+      background-color:$bgcolor1;
+    }  
+  }
+  .statistics-page{
+    .site-hero{
+      background: url(assets/statistics-bg.png) no-repeat 100% bottom;
+      background-size: cover;
+    }
+  }
+  .work-page{
+    .site-hero{
+      background: url(assets/background-learn.png) no-repeat;
+      background-position: bottom right;
+      background-size: auto;
+      padding-bottom: 0;
+      @media only screen and (max-width: $screen767){
+        background-size: 260px;
+        .col-md-7{
+          padding-top: 100px;
+        }
+      }
+    }  
+  }
+  .blog-page,.blog-detail-page{
+    .site-hero{
+      background: url(assets/group.png) no-repeat;
+      background-position: top 95px right 100px;
+      background-size: auto;  
+      /*margin-right: 100px;*/
+      @media only screen and (max-width: $screen767){
+        background-size: 260px;
+        .col-md-7{
+          padding-top: 100px;
+        }
+      }
+      @media only screen and (max-width: $screen540){
+        background-size: 260px;
+        padding-bottom: 80px;
+        /*margin-right: 10px;    */
+        background-position: top 0 right 20px;
+      }
+    }  
+  }
+  .blog-page{
+    .site-header{
+      position: relative;
+      .form-wrap{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      form{
+        position: relative;
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+      }
+      input{
+        line-height: $line-height72;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 46px;
+        background-color: $bgcolor2;
+        box-shadow: 0 12px 32px 0 rgba(0,0,0,0.1);
+        @media only screen and (max-width: $screen540){
+          line-height:$line-height54;
+        }
+      }
+      .search-btn{
+        @include btn-bg($bgcolor1);
+        position: absolute;
+        right: 0;
+        bottom: 0;          
+        border-radius: 40px 36px 36px 0;
+        padding:21px 30px;
+        a{
+          color: $color2;
+          font-size: $font24;
+          line-height: $line-height32;
+          font-weight: $font-medium;
+        }
+        @media only screen and (max-width: $screen540){
+          padding:11px 20px;
+          a{
+            font-size: $font16;
+          }
+        } 
+      }
+    }
+  }
+  .contact-page{
+    .site-hero{
+      background: url(assets/shape.png) no-repeat;
+      background-size: auto;   
+      padding-bottom: 200px; 
+      /*margin-right: 100px;*/
+      background-position: top 95px right 20px;
+      @media only screen and (max-width: $screen540){
+        background-size: 260px;
+        padding-bottom: 80px;
+        /*margin-right: 10px;*/
+        .col-md-6{
+          padding-top: 100px;
+        }
+      }
+    } 
+  }
+  .index-page{
+    .site-hero {
+      .hero-left{
+        @media only screen and (max-width:$screen767){
+          margin-bottom: 34px;
+        }  
+      }
+    } 
+  }
+
+
+  .site-newsletter{
+    padding: 80px 0 160px;
+    @media only screen and (max-width: $screen900){
+     padding:50px 0 100px;
+   }  
+   @media only screen and (max-width: $screen540){
+    padding:25px 0 50px;
+  }  
+  .newsletter-box{
+    max-width:100%;
+    width:1030px;
+    margin:0 auto;
+    background-color:$bgcolor4;
+    padding: 72px;
+    border-radius: 0 140px;
+    text-align:center;
+    position:relative;
+    @media only screen and (max-width: $screen900){
+      padding:50px;
+    }    
+    @media only screen and (max-width: $screen540){
+      padding:40px 30px 30px;
+      border-radius:0 100px;
+    }  
+    @media only screen and (max-width: $screen375){
+      padding:40px 15px 15px;
+      border-radius:0 50px;
+    }         
+    h2{
+      color: $color3; 
+      font-weight:$font-semibold;
+      font-size: $font54;  
+      line-height: $line-height62;  
+      margin-bottom:25px;
+      @media only screen and (max-width: $screen900){
+        font-size:$font46;
+        line-height: $line-height48;
+      }   
+      @media only screen and (max-width: $screen540){
+        font-size:$font32;
+        line-height: $line-height36;
+      }     
+     /* @media only screen and (max-width: $screen375){
+        font-size:$font26;
+        line-height: $line-height26;
+        }*/              
+      }
+      h6{
+        color: $color3; 
+        font-weight: $font-regular; 
+        font-size: $font24;        
+        line-height: $line-height32;  
+        @media only screen and (max-width: $screen900){
+          font-size:$font20;
+          line-height: $line-height24;
+        }   
+        @media only screen and (max-width: $screen540){
+          font-size:$font16;
+          line-height: $line-height18;
+        }            
+        span{
+          position:relative;
+          z-index:1;
+          color: $color3; 
+          font-weight: $font-regular; 
+          font-size: $font24;        
+          line-height: $line-height32;   
+          @media only screen and (max-width: $screen900){
+            font-size:$font20;
+            line-height: $line-height24;
+          }      
+          @media only screen and (max-width: $screen900){
+            font-size:$font16;
+            line-height: $line-height18;
+          }                  
+          &:before{
+            height: 23px;
+            width: 100%;
+            background-color: $bgcolor2;
+            position: absolute;
+            left: 0;
+            content: "";
+            top: 4px;
+            z-index: -1;
+            @media only screen and (max-width: $screen900){
+              height:16px;
+            } 
+          }
+        }
+      }
+      h3{
+        color: $color3; 
+        font-weight: $font-regular; 
+        font-size: $font64;  
+        line-height: $line-height95; 
+        margin-top:40px; 
+        margin-bottom:25px;
+        @media only screen and (max-width: $screen900){
+          font-size:$font48;
+          line-height: $line-height52;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }      
+        @media only screen and (max-width: $screen540){
+          font-size:$font34;
+          line-height: $line-height38;
+        }      
+        @media only screen and (max-width: $screen375){
+          font-size:$font28;
+          line-height: $line-height30;
+        }          
+        span{
+          position:relative;
+          z-index:1;
+          color: $color3; 
+          font-weight: $font-regular; 
+          font-size: $font64;        
+          line-height: $line-height95;   
+          @media only screen and (max-width: $screen900){
+            font-size:$font48;
+            line-height: $line-height52;
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }     
+          @media only screen and (max-width: $screen540){
+            font-size:$font34;
+            line-height: $line-height38;
+          }  
+          @media only screen and (max-width: $screen540){
+            font-size:$font28;
+            line-height: $line-height30;
+          }                   
+          &:before{
+            height: 42px;
+            width: 150px;
+            background-color: $bgcolor2;
+            position: absolute;
+            left: 0;
+            content: "";
+            top: 28px;
+            z-index: -1;
+            @media only screen and (max-width: $screen900){
+              height:34px;
+              top:18px;
+              width:115px;
+            }   
+            @media only screen and (max-width: $screen540){
+              height:25px;
+              top:14px;
+              width:80px;
+            }   
+            @media only screen and (max-width: $screen375){
+              height:18px;
+              top:12px;
+              width:67px;
+            }                             
+          }
+        }      
+      }
+      h5{
+        color: $color6; 
+        font-weight: $font-regular; 
+        font-size: $font20;  
+        line-height: $line-height26;
+        margin-bottom:10px;
+      }
+      ul{
+        margin-bottom: 15px;
+        li{
+          p{
+            color: $color6; 
+            font-weight: $font-regular; 
+            font-size: $font18;  
+            line-height: $line-height30;        
+          }
+        }
+      }
+      .newsletter-btn{
+        @include btn-bg($bgcolor1);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 30px 40px;
+        border-radius: 48px 0 0;
+        a{
+          color: $color2;
+          font-size: $font24;
+          line-height: $line-height34;
+          font-weight: $font-medium;
+        }
+        @media only screen and (max-width: $screen900){
+          padding:20px 24px;
+          a{
+            font-size: $font20;
+            line-height: $line-height28;
+          }
+        }  
+      }
+      form{
+        position:relative;      
+        max-width: 100%;
+        width: 640px;
+        margin: 50px auto 0;
+        @media only screen and (max-width: $screen540){
+          margin:30px auto 0;
+        }       
+        input[type="email"]{
+          line-height:$line-height72;
+          @media only screen and (max-width: $screen540){
+            line-height:$line-height54;
+          }  
+        }
+      }
+      .search-btn{
+        @include btn-bg($bgcolor1);
+        position: absolute;
+        right: 0;
+        bottom: 0;          
+        border-radius: 40px 36px 36px 0;
+        padding:20px 70px;
+        a{
+          color: $color2;
+          font-size: $font24;
+          line-height: $line-height32;
+          font-weight: $font-medium;
+        }
+        @media only screen and (max-width: $screen540){
+          padding:11px 20px;
+          a{
+            font-size: $font16;
+          }
+        } 
+      }
+    } 
+  }
+
+  .hero-progress {
+    position: relative;
+    p{
+      color: $color4; 
+      font-weight: $font-extra !important; 
+      font-size: $font20 !important;  
+      line-height: $line-height26 !important;
+      display: flex !important;
+      text-align: right !important;
+    }
+  }
+  .ng5-slider .ng5-slider-bar-wrapper .ng5-slider-bar:before {
+    content: "0%";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: black;
+    font-size: $font12;
+  }
+  .ng5-slider .ng5-slider-bar-wrapper .ng5-slider-bar:after {
+    content: "1000%";
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    color: black;
+    font-size: $font12;
+  }
+  .ng5-slider .ng5-slider-bubble.ng5-slider-limit{
+    font-size: 0 !important;
+  }
+  .ng5-slider .ng5-slider-bar-wrapper{
+    left: 0;    
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    width: 100%;
+    height: auto !important;
+    z-index: 1;
+  }
+  .ng5-slider .ng5-slider-bar-wrapper .ng5-slider-bar{
+    height: 20px;
+    margin-top: -13px;
+    top: 50%;
+    left: 0;    
+    position: relative;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: $bgcolor2;
+    background-image: none;
+  }
+  .ng5-slider .ng5-slider-pointer{
+    background: url(assets/progress.png) no-repeat 100%;
+    background-size: 100%;
+    width: 60px !important;
+    margin-top: -15px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    top: 0 !important;
+  }
+  .ng5-slider{
+    margin: 0 !important;
+    height: auto !important;
+  }
+  .ng5-slider .ng5-slider-pointer:after{
+    display: none;
+  }
+  .ng5-slider .ng5-slider-bubble{    
+    color: #3D52D5 !important;
+    font-weight: 800;
+    font-size: 20px !important;
+    line-height: 40px;
+    padding: 0 !important;
+    z-index: 999;
+    top: -17px;
+    bottom: 0 !important;
+  }
+  .hero-progress{  
+    $buttonconfig:'10%' #52E5E7, '20%' #E2F89C, '30%' #EF7A85 ,'40%' #FEC601;
+    @each $tuple in $buttonconfig{
+      .hero-progressbar[data-percentage="#{nth($tuple, 1)}"]{
+        p{
+          color: nth($tuple, 2);
+        }
+      }
+    }
+  }
+  .slider-txt{
+    p{
+      opacity: 0.9;
+      color: $color2;
+      font-weight: $font-bold;
+      font-size: $font16;
+      line-height: $line-height22;
+    }
+    h5{
+      color: $color2;
+      font-weight: $font-extra;
+      font-size: $font44;
+      line-height: $line-height64;
+    }
+  }
+  .hero-right .tooltip{
+    opacity: 1; 
+    color: rgba(251, 252, 255, .6);     
+    font-size: $font16;  
+    line-height:$line-height20;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .tooltip .tooltiptext {
+    width: 265px;
+    border: 1px solid rgba(11,19,43,0.1);     
+    border-radius: 16px;  
+    background-color: $bgcolor7;  
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.1);
+    color: $color2;
+    text-align: left;    
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -116px;
+    visibility: hidden;
+    left: 0;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .tooltiptext:after{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $bordercolor7;
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    content: "";
+  }
+  @media only screen and (max-width: $screen767){
+    .tooltip{
+      margin-bottom:100px;
+    }
+  }
+  @media only screen and (max-width: $screen375){
+    .slider-txt p{
+      font-size: $font13;
+      line-height: $line-height18;
+    }
+    .slider-txt h5{
+      font-size: $font30;
+      line-height: $line-height32;
+    }
+  }
+
+  aw-wizard-navigation-bar.horizontal ul.steps-indicator li a .label{
+    display: none !important;
+  }

@@ -1,0 +1,219 @@
+@import "../../styling/variable.scss";
+
+.navbar{
+  background-color: $bgcolor1;
+}
+.navbar{
+  .navbar-brand{
+    img{
+      @media only screen and (max-width: $screen375){
+        width:100px;
+      }
+    }
+  }
+  .account-btn{
+    @include btn-bg($bgcolor2);
+    border: 1px solid rgba(58,64,90,0.1);  
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.1);
+    border-radius: 22px;
+    padding: 9px 21px;
+    a{
+      color:$color7;
+    }
+    @media only screen and (max-width: $screen375){
+      margin-right:18px !important;
+    }
+  }
+  .get-button{
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+    @media only screen and (max-width: $screen767){
+      left: 50%;
+      transform: translateX(-50%);
+      right: inherit;
+      margin: 0 !important; 
+      bottom: 0;     
+    }
+    @media only screen and (max-width: $screen435){
+      bottom: 35px;
+    }
+  }
+  .get-btn{
+    @include btn-bg($bgcolor4);
+    border-radius: 36px;
+    padding: 22px 60px;
+    border: 1px solid rgba(0,0,0,0.1); 
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,0.15);
+    a{
+      color:$color6;
+      font-size: $font18;
+      line-height: $line-height26;
+    }
+    @media only screen and (max-width: $screen435){
+      padding:18px 33px;
+      a{
+        font-size: $font14;
+        line-height: $line-height26;
+      }
+    }
+  }
+}
+.navbar-nav{
+  flex-grow: 1;
+  justify-content: flex-end;
+  border-right: 1px solid $bordercolor8;
+  padding-right:22px;
+  .nav-item{
+    padding:0 15px !important;
+  }
+  .nav-link{
+    color:$color2 !important;
+    padding:0 !important;
+    position: relative;
+    &:after{
+      content: '';
+      border-bottom: 1px solid transparent;
+      width: 0px;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+    &:hover{
+      color: $color4 !important;
+      &:after{
+        border-bottom: 1px solid $bordercolor4;
+        width: 100%;
+      }
+    }
+  }
+}
+.my-account{
+  .account-link{
+    padding:0 30px;
+    a{      
+      color:$color2 !important;
+      position: relative;
+      &:after{
+        content: '';
+        border-bottom: 1px solid transparent;
+        width: 0px;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+      }
+/*      &:hover{
+        color: $color4 !important;
+        &:after{
+          border-bottom: 1px solid $bordercolor4;
+          width: 100%;
+        }
+        } */     
+      }
+    }
+    svg{
+      width: 22px;
+      transform: rotate(90deg);
+      top: 4px;
+      position: relative;
+    }
+  }
+  .dash-link{
+    svg{
+      width: 22px;
+      transform: rotate(90deg);
+      top: 4px;
+      position: relative;
+    }  
+  }
+
+  .slide-logo img{
+    width: 180px;
+  }
+
+  @media only screen and (min-width: $screen992){
+    .mobile-menu{
+      display: none;
+    }
+    .close{
+      display:none;
+    }
+    .mobile-account{
+      display:none;
+    }
+    .resp-btn{
+      display: none !important;
+    }
+  }
+  
+  @media only screen and (max-width: $screen991) {
+    .navbar-toggler{
+      border: transparent;
+      outline: none;
+      padding: 0;    
+    }
+    .navbar-toggler:focus {
+      outline: none;
+    }
+    .navbar-collapse{ 
+      background-color: $bgcolor1;
+      bottom: 0;
+      box-shadow: -12px 0 24px 0 rgba(0,0,0,0.15);
+      opacity: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform: translateX(100%);
+      transition: ease 0.5s;
+      width: 320px;
+      z-index: 9999; 
+    }
+    .navbar .show{
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    .close{
+      display: block;
+      padding:35px 25px 0 0;
+      opacity:1;
+    }
+    .close-btn{
+      background: transparent;
+      border: transparent;
+    }
+    .close-btn svg{
+      width:20px;
+    }
+    .navbar-nav{
+      margin: 0;
+      padding: 0;
+      border: transparent;
+    }
+    .navbar-nav,.my-account{
+      display:none !important;
+    }
+    .nav-link{
+      padding:15px 0;
+      color:$color2;
+    }
+    .mobile-menu{
+      padding: 25px;
+      border-bottom: 1px solid rgba(221, 221, 223, .25);
+    }
+    .mobile-account{
+      padding: 25px;
+      img{
+        width:40px;
+        display:block;
+      }
+    }
+  }
+  .tablet-link{
+    display: none;
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+      padding: 0 30px;
+      color: $color2;
+      display: flex;
+    }
+  }
+  /*-----------------Responsive menu end-----------------*/

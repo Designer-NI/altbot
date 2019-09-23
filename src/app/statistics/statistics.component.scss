@@ -1,0 +1,11 @@
+@import "../../styling/variable";
+.site-hero-bg{
+  background: url(../../assets/header-bg.png) no-repeat 100% bottom;
+  background-size: cover;
+}
+.statistics-page{
+    .site-hero{
+      background: url(../../assets/statistics-bg.png) no-repeat 100% bottom;
+      background-size: cover;
+    }
+  }

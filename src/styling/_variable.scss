@@ -1,0 +1,269 @@
+$themecolor1:#3D52D5;
+$themecolor2:#FBFCFF;
+$themecolor3:#0B132B;
+$themecolor4:#52E5E7;
+$themecolor5:#6200B3;
+$themecolor6:#000000;
+$themecolor7:#3A405A;
+$themecolor8:#DDDDDF;
+$themecolor9:#EEF0F2;
+
+$bordercolor1:$themecolor1;
+$bordercolor2:$themecolor2;
+$bordercolor3:$themecolor3;
+$bordercolor4:$themecolor4;
+$bordercolor5:$themecolor5;
+$bordercolor6:$themecolor6;
+$bordercolor7:$themecolor7;
+$bordercolor8:$themecolor8;
+$bordercolor9:$themecolor9;
+
+$color1:$themecolor1;
+$color2:$themecolor2;
+$color3:$themecolor3;
+$color4:$themecolor4;
+$color5:$themecolor5;
+$color6:$themecolor6;
+$color7:$themecolor7;
+$color8:$themecolor8;
+$color9:$themecolor9;
+
+$bgcolor1:$themecolor1;
+$bgcolor2:$themecolor2;
+$bgcolor3:$themecolor3;
+$bgcolor4:$themecolor4;
+$bgcolor5:$themecolor5;
+$bgcolor6:$themecolor6;
+$bgcolor7:$themecolor7;
+$bgcolor8:$themecolor8;
+$bgcolor9:$themecolor9;
+
+$font10:10px;
+$font11:11px;
+$font12:12px;
+$font13:13px;
+$font14:14px;
+$font15:15px;
+$font16:16px;
+$font18:18px;
+$font20:20px;
+$font22:22px;
+$font24:24px;
+$font26:26px;
+$font28:28px;
+$font30:30px;
+$font32:32px;
+$font34:34px;
+$font36:36px;
+$font38:38px;
+$font40:40px;
+$font42:42px;
+$font44:44px;
+$font46:46px;
+$font48:48px;
+$font50:50px;
+$font54:54px;
+$font60:60px;
+$font64:64px;
+$font90:90px;
+$font100:100px;
+
+$line-height12:12px;
+$line-height14:14px;
+$line-height16:16px;
+$line-height18:18px;
+$line-height20:20px;
+$line-height22:22px;
+$line-height24:24px;
+$line-height26:26px;
+$line-height28:28px;
+$line-height30:30px;
+$line-height32:32px;
+$line-height34:34px;
+$line-height36:36px;
+$line-height38:38px;
+$line-height40:40px;
+$line-height42:42px;
+$line-height44:44px;
+$line-height48:48px;
+$line-height52:52px;
+$line-height54:54px;
+$line-height60:60px;
+$line-height62:62px;
+$line-height64:64px;
+$line-height72:72px;
+$line-height95:95px;
+$line-height110:110px;
+$line-height150:150px;
+
+$font-light:300;
+$font-regular:400;
+$font-medium:500;
+$font-semibold:600;
+$font-bold:700;
+$font-extra:800;
+$font-black:900;
+
+$screen1539:1539px;
+$screen1350:1350px;
+$screen1260:1260px;
+$screen1199:1199px;
+$screen1081:1081px;
+$screen1080:1080px;
+$screen1024:1024px;
+$screen991:991px;
+$screen992:992px;
+$screen900:900px;
+$screenup768:768px;
+$screen767:767px;
+$screen540:540px;
+$screen480:480px;
+$screen435:435px;
+$screen375:375px;
+$screen360:360px;
+$screen320:320px;
+
+@mixin respond-to($class) {
+  @if $class == $screen1539 {
+    @media only screen and (max-width: $screen1539) {
+      @content;
+    }
+  }
+  @if $class == $screen1350 {
+    @media only screen and (max-width: $screen1350) {
+      @content;
+    }
+  }
+  @if $class == $screen1260 {
+    @media only screen and (max-width: $screen1260) {
+      @content;
+    }
+  }
+  @if $class == $screen1199 {
+    @media only screen and (max-width: $screen1199) {
+      @content;
+    }
+  }
+  @if $class == $screen1081 {
+    @media only screen and (min-width: $screen1081) {
+      @content;
+    }
+  }
+  @if $class == $screen1080 {
+    @media only screen and (max-width: $screen1080) {
+      @content;
+    }
+  }
+  @if $class == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 991px){
+      @content;
+    }
+  }
+  @if $class == $screen1024{
+    @media only screen and (max-width: $screen1024) {
+      @content;
+    }
+  }
+  @if $class == $screen991 {
+    @media only screen and (max-width: $screen991) {
+      @content;
+    }
+  }
+  @if $class == $screen992{
+    @media only screen and (min-width: $screen992) {
+      @content;
+    }
+  }
+  @if $class == $screen900{
+    @media only screen and (max-width: $screen900) {
+      @content;
+    }
+  }  
+  @if $class == $screenup768{
+    @media only screen and (min-width: $screenup768) {
+      @content;
+    }
+  }
+  @if $class == $screen767{
+    @media only screen and (max-width: $screen767) {
+      @content;
+    }
+  }
+  @if $class == $screen540 {
+    @media only screen and (max-width: $screen540) {
+      @content;
+    }
+  }
+  @if $class == $screen480 {
+    @media only screen and (max-width: $screen480) {
+      @content;
+    }
+  }
+  @if $class == $screen435 {
+    @media only screen and (max-width: $screen435) {
+      @content;
+    }
+  }
+  @if $class == $screen375{
+    @media only screen and (max-width: $screen375) {
+      @content;
+    }
+  }  
+  @if $class == $screen360{
+    @media only screen and (max-width: $screen360) {
+      @content;
+    }
+  }
+  @if $class == $screen320{
+    @media only screen and (max-width: $screen320) {
+      @content;
+    }
+  }
+}
+
+
+@mixin btn-bg ($background : $bgcolor1) {
+    border-radius: 23px;
+    text-align: center;
+    border: none;
+    padding: 16px 21px;
+    text-decoration: none;
+    display: inline-block;
+    cursor:pointer;
+    a{
+      font-weight: $font-medium;
+      line-height: 1;
+      font-size: $font14;
+    }
+    @if ($background == $bgcolor1) {
+      background: $bgcolor1;
+      &:hover{
+        background: $bgcolor5;
+        a{
+          color: $color2;
+        } 
+      }    
+    } 
+    @else if ($background == $bgcolor2) {
+      background: $bgcolor2;
+      &:hover{
+        background: $bgcolor4;
+      }    
+    } 
+    @else if ($background == $bgcolor3) {
+      background: $bgcolor3;
+    }
+    @else if ($background == $bgcolor4) {
+      background: $bgcolor4;
+      &:hover{
+        background: $bgcolor5;
+        a{
+          color: $color2;
+        }
+      }
+    }
+    @else if ($background == $bgcolor5) {
+      background: $bgcolor5;
+    }
+  }
+  

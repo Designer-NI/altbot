@@ -1,0 +1,257 @@
+<div class="site-hero-bg">
+    <div class="site-hero ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="hero-left wow fadeInLeft animated">
+                        <h1>Meet “Al.t.bot”,<br>your <span>next gen</span> bot.</h1>
+                        <p>Next generation algorythmic trading bot is here. It auto adapts to the market changes by
+                            nonstop recalcualtion of data. We won’t bore you more with technical jargon and comlicated
+                            settings
+                            or fariry tales. We will enable you to start using it for <br><span>best trading
+                                results.</span>
+                        </p>
+                        <p>Try - use setup sliders on the right to simply customize your Al.t.bot, or you can go for our
+                            own developed auto algorythm settings. Eather way - simple or advanced - <span>you control
+                                the
+                                situation.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-right">
+                        <div class="slide-logo text-center mb-3 wow fadeInDown animated">
+                            <img src="../../assets/logo-medium.png" alt="logo" class="" title="">
+                        </div>
+                        <div class="hero-progress wow fadeInDown animated">
+                            <div class="mb-4 hero-progressbar first-bar" data-percentage="10%">
+                                <p>Investment</p>
+                                <ng5-slider [(value)]="value" [options]="options" class="slider slider-horizontal"></ng5-slider>
+                            </div>
+                            <div class="mb-4 hero-progressbar first-bar" data-percentage="20%">
+                                <p>Monthly return</p>
+                                <ng5-slider [(value)]="value2" [options]="options2" class="slider slider-horizontal"></ng5-slider>
+                            </div> 
+                        </div>
+                        <div class="d-flex justify-content-between invest-txt">
+                            <div class="slider-txt">
+                                <p>Estimated profit:</p>
+                                <h5>$ 2450</h5>
+                            </div>
+                            <div class="slider-txt">
+                                <p>Max historical drawdown:</p>
+                                <h5>12 %</h5>
+                            </div>
+                        </div>
+                        <div class="tooltip">* Read investment warning
+                            <span class="tooltiptext">This is not financial advice, you trade at your own risk.Past
+                                performance does not guarantee future results.</span>
+                        </div>
+                        <div class="d-flex justify-content-end mt-5 get-button">
+                            <div class="btn-bg get-btn">
+                                <a routerLink='/dashboard'>Get this bot!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="site-quote">
+    <div class="container">
+        <div class="quote-box d-flex">
+            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+            <div class="quote-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px"
+                    height="41px" viewBox="0 0 48 41" version="1.1">
+                    <title>“</title>
+                    <desc>Created with Sketch.</desc>
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A" fill-rule="nonzero">
+                            <g transform="translate(96.000000, 5933.000000)">
+                                <g transform="translate(1066.000000, 276.000000)">
+                                    <path
+                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <h2>There is no strategy which can beat the market by not adapting to the market changes.</h2>
+                <h6>Maris Kalnins, Super trader</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-chart></app-chart>
+
+<app-brand></app-brand>
+
+<app-point></app-point>
+
+<app-pricing></app-pricing>
+
+
+<section class="site-feedback">
+    <div class="container">
+        <div class="sec-title">
+            <div class="oval wow zoomIn animated"></div>
+            <h3 class="wow zoomIn animated">Real customer feedback</h3>
+            <p class="wow zoomIn animated">We do not hide, we gladly help our customers and always make it right,<br>
+                thats why we get this kind of love on daily basis 😍</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="feedback-column">
+            <div class="feedback-img-slider">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide>
+                        <div class="feedback-box d-flex">
+                            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+                            <div class="feedback-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="41px" viewBox="0 0 48 41" version="1.1">
+                                    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                    <title>“</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A"
+                                            fill-rule="nonzero">
+                                            <g transform="translate(96.000000, 5933.000000)">
+                                                <g transform="translate(1066.000000, 276.000000)">
+                                                    <path
+                                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h2>This Al.t.bot just makes a real great trading. I have had millons of these before
+                                    but nothing compares to this inticate algorithmical trading bot. It has some very
+                                    complicated backend that adjusts to market and it makes all the difference!</h2>
+                                <h6>Maris Kalnins, Super trader</h6>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="feedback-box d-flex">
+                            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+                            <div class="feedback-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="41px" viewBox="0 0 48 41" version="1.1">
+                                    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                    <title>“</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A"
+                                            fill-rule="nonzero">
+                                            <g transform="translate(96.000000, 5933.000000)">
+                                                <g transform="translate(1066.000000, 276.000000)">
+                                                    <path
+                                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h2>This Al.t.bot just makes a real great trading. I have had millons of these before
+                                    but nothing compares to this inticate algorithmical trading bot. It has some very
+                                    complicated backend that adjusts to market and it makes all the difference!</h2>
+                                <h6>Maris Kalnins, Super trader</h6>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="feedback-box d-flex">
+                            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+                            <div class="feedback-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="41px" viewBox="0 0 48 41" version="1.1">
+                                    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                    <title>“</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A"
+                                            fill-rule="nonzero">
+                                            <g transform="translate(96.000000, 5933.000000)">
+                                                <g transform="translate(1066.000000, 276.000000)">
+                                                    <path
+                                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h2>This Al.t.bot just makes a real great trading. I have had millons of these before
+                                    but nothing compares to this inticate algorithmical trading bot. It has some very
+                                    complicated backend that adjusts to market and it makes all the difference!</h2>
+                                <h6>Maris Kalnins, Super trader</h6>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="feedback-box d-flex">
+                            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+                            <div class="feedback-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="41px" viewBox="0 0 48 41" version="1.1">
+                                    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                    <title>“</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A"
+                                            fill-rule="nonzero">
+                                            <g transform="translate(96.000000, 5933.000000)">
+                                                <g transform="translate(1066.000000, 276.000000)">
+                                                    <path
+                                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h2>This Al.t.bot just makes a real great trading. I have had millons of these before
+                                    but nothing compares to this inticate algorithmical trading bot. It has some very
+                                    complicated backend that adjusts to market and it makes all the difference!</h2>
+                                <h6>Maris Kalnins, Super trader</h6>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="feedback-box d-flex">
+                            <img src="../../assets/maris.png" alt="quote-img" title="" class="quote-img">
+                            <div class="feedback-inner">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="48px" height="41px" viewBox="0 0 48 41" version="1.1">
+                                    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+                                    <title>“</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g transform="translate(-1162.000000, -6209.000000)" fill="#3A405A"
+                                            fill-rule="nonzero">
+                                            <g transform="translate(96.000000, 5933.000000)">
+                                                <g transform="translate(1066.000000, 276.000000)">
+                                                    <path
+                                                        d="M2.4,41 C0.799992,33.933298 0,27.800026 0,22.6 C0,15.133296 1.733316,9.500019 5.2,5.7 C8.666684,1.899981 13.7333,0 20.4,0 L20.4,8 C16.933316,8 14.433341,8.933324 12.9,10.8 C11.366659,12.666676 10.6,15.466648 10.6,19.2 L10.6,23.8 L20.6,23.8 L20.6,41 L2.4,41 Z M29.4,41 C27.799992,33.933298 27,27.800026 27,22.6 C27,15.133296 28.733316,9.500019 32.2,5.7 C35.666684,1.899981 40.7333,0 47.4,0 L47.4,8 C43.933316,8 41.433341,8.933324 39.9,10.8 C38.366659,12.666676 37.6,15.466648 37.6,19.2 L37.6,23.8 L47.6,23.8 L47.6,41 L29.4,41 Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h2>This Al.t.bot just makes a real great trading. I have had millons of these before
+                                    but nothing compares to this inticate algorithmical trading bot. It has some very
+                                    complicated backend that adjusts to market and it makes all the difference!</h2>
+                                <h6>Maris Kalnins, Super trader</h6>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-newsletter></app-newsletter>

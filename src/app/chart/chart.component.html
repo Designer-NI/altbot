@@ -1,0 +1,66 @@
+<section class="site-chart">
+        <div class="container">
+            <div class="sec-title">
+                <div class="oval wow zoomIn animated"></div>
+                <h3 class="wow zoomIn animated">{{s1}}</h3>
+                <p class="wow zoomIn animated">{{p1}}</p>
+            </div>
+            <!--<div class="chart-box d-flex justify-content-center mb-4">
+                <ul class="d-flex justify-content-center">
+                    <li class="first-box box-link active">
+                        <a href="#">1month</a>
+                    </li>
+                    <li class="box-link">
+                        <a href="#">3month</a>
+                    </li>
+                    <li class="box-link">
+                        <a href="#">1Year</a>
+                    </li>
+                    <li class="last-box box-link">
+                        <a href="#">All</a>
+                    </li>												
+                </ul>
+            </div> -->
+            <div id="tabs" #tabs>
+                <div class="chart-box d-flex justify-content-center mb-4">
+                <ul class="nav nav-pills d-flex justify-content-center">
+                  <li class="nav-item first-box box-link">
+                    <a class="nav-link active" href="#tab1" [ngClass]="{ 'active':activeTab==='tab1'}" (click)="tab1('tab1')"
+                       data-toggle="tab">Search</a>
+                  </li>
+                  <li class="nav-item box-link">
+                    <a class="nav-link" href="#tab2" [ngClass]="{ 'active':activeTab==='tab2'}" data-toggle="tab"
+                       (click)="tab2('tab2')">Results</a>
+                  </li>
+                  <li class="nav-item box-link">
+                    <a class="nav-link" href="#tab3" [ngClass]="{ 'active':activeTab==='tab3'}" data-toggle="tab"
+                       (click)="tab3('tab3')">Results</a>
+                  </li>
+                  <li class="nav-item box-link last-box">
+                    <a class="nav-link" href="#tab4" [ngClass]="{ 'active':activeTab==='tab4'}" data-toggle="tab"
+                       (click)="tab4('tab4')">Results</a>
+                  </li>
+                </ul>       
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane" id="tab1" [ngClass]="{ 'active':activeTab==='tab1'}">
+                        <google-chart [data]="pieChart" class="piechart"></google-chart>
+                  </div>
+                  <div class="tab-pane" id="tab2" [ngClass]="{ 'active':activeTab==='tab2'}">
+                        <img src="../../assets/chart.jpg" alt="chart" title="" class="">
+                  </div>
+                  <div class="tab-pane" id="tab3" [ngClass]="{ 'active':activeTab==='tab3'}">
+                        <google-chart [data]="columnChart" id="chart2"></google-chart>
+                  </div>
+                  <div class="tab-pane" id="tab4" [ngClass]="{ 'active':activeTab==='tab4'}">
+                        <img src="../../assets/chart.jpg" alt="chart" title="" class="">
+                  </div>
+                </div>              
+              </div>
+             <!-- <div class="chart-table">
+                <img src="../../assets/chart.jpg" alt="chart" title="" class="">
+            </div>  -->
+        </div>
+    </section>
+
+    

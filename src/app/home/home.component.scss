@@ -1,0 +1,164 @@
+@import "../../styling/variable.scss";
+
+.site-hero-bg{
+    background: url(../../assets/header-bg.png) no-repeat 100% bottom;
+    background-size: cover;
+}
+.slide-logo img{
+    width: 180px;
+  }
+  .get-button{
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+    @media only screen and (max-width: $screen767){
+      left: 50%;
+      transform: translateX(-50%);
+      right: inherit;
+      margin: 0 !important; 
+      bottom: 0;     
+    }
+    @media only screen and (max-width: $screen435){
+      bottom: 35px;
+    }
+  }
+  .get-btn{
+    @include btn-bg($bgcolor4);
+    border-radius: 36px;
+    padding: 22px 60px;
+    border: 1px solid rgba(0,0,0,0.1); 
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,0.15);
+    a{
+      color:$color6;
+      font-size: $font18;
+      line-height: $line-height26;
+    }
+    @media only screen and (max-width: $screen435){
+      padding:18px 33px;
+      a{
+        font-size: $font14;
+        line-height: $line-height26;
+      }
+    }
+  }
+
+
+/*-----------------Hero end-----------------*/
+
+  .site-quote{
+    padding:80px 0 0;
+    @media only screen and (max-width: $screen900){
+      padding:30px 0 0;
+    }
+    .quote-box{
+      max-width:100%;
+      width:880px;
+      margin:0 auto;
+      position:relative;
+      .quote-img{
+        width: 180px;
+        position: absolute;
+        right: 0;
+        top:-50px;
+      }
+      .quote-inner{
+        z-index:2;
+      }
+      h2{
+        color: $color3;      
+        font-size: $font40;
+        line-height: $line-height44;
+        margin-left: 30px;
+        font-weight:$font-semibold;
+        @media only screen and (max-width: $screen900){
+          font-size:$font32;
+          line-height: $line-height38;
+        }
+        @media only screen and (max-width: $screen540){
+          font-size:$font24;
+          line-height: $line-height30;
+          margin-left:0;
+        }  
+        @media only screen and (max-width: $screen375){
+          font-size:$font18;
+          line-height: $line-height20;
+        }           
+      }
+      h6{
+        color: $color7;
+        font-size: $font20;
+        line-height: $line-height30;
+        text-align: right;
+        margin-right: 30px;
+        @media only screen and (max-width: $screen540){
+          font-size:$font14;
+          line-height: $line-height22;
+          margin-right:0;
+        } 
+      }
+    }
+  }
+
+  /*-----------------Quote end-----------------*/
+
+  .site-feedback{
+    padding:0 0 80px;
+    @media only screen and (max-width: $screen900){
+      padding:0 0 50px;
+    }    
+    .sec-title{
+      .oval{
+        background-color: $bgcolor7;
+      }
+    }   
+    .feedback-column{
+      overflow: hidden;
+    }
+    .feedback-img-slider{
+      padding-left: 100px;
+      margin-right: -200px;
+      @media only screen and (max-width: $screen991){
+        padding-left:0;
+        margin-right: 0;
+      }
+    }
+    .feedback-box{
+      max-width:100%;
+      width:880px;
+      margin:0 auto;
+      position:relative;
+      .quote-img{
+        width: 180px;
+        position: absolute;
+        right: 0;
+      }
+      .feedback-inner{
+        z-index:2;
+      }
+      h2{
+        color: $color3;      
+        font-size: $font18;
+        line-height: $line-height22;
+        margin-right: 30px;
+        font-weight:$font-regular;
+        @media only screen and (max-width: $screen900){
+          font-size:$font14;
+          line-height: $line-height18;
+          margin-bottom: 10px;
+          margin-right: 0;
+        }        
+      }
+      h6{
+        color: $color7;
+        font-size: $font20;
+        line-height: $line-height30;
+        text-align: right;
+        margin-right: 30px;
+        @media only screen and (max-width: $screen900){
+          font-size:$font16;
+        } 
+      }
+    }
+  }
+
+  /*-----------------Feedback end-----------------*/

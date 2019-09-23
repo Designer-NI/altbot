@@ -1,0 +1,103 @@
+@import "../../styling/variable.scss";
+
+.site-signup{
+    border-radius: 40px;
+    background-color: $bgcolor2;
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,0.15);
+    padding: 50px;
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto;
+    min-width: 290px;
+    @media only screen and (max-width: $screen767){
+      width:100%;
+      padding: 50px 15px;    
+    }
+    h1{
+      color: $color1;
+      font-weight: $font-semibold;  
+      font-size: $font40;  
+      line-height: $line-height44;  
+      text-align: center;
+      margin-bottom:50px;
+      @media only screen and (max-width: $screen540){
+        font-size: $font30;
+        line-height: $line-height36;   
+      }     
+    }
+    .form-wrap{
+      form{
+        width: 390px;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .form-control{
+        border: 1px solid rgba(58,64,90,0.1);
+        border-radius: 27px;
+        background-color: $bgcolor9;
+        box-shadow: 0 12px 24px 0 rgba(11,19,43,0.1);
+        margin-bottom: 24px;
+        padding: 26px 20px;
+      }
+      .btn-cancel{
+        border: 1px solid rgba(11,19,43,0.1);
+        border-radius: 25px;
+        padding: 12px 40px;
+        cursor:pointer;
+        text-align: center;
+        margin-bottom: 0;
+        box-shadow: none;
+        background: transparent;
+          color: rgba(58,64,90,0.5);
+          font-weight: $font-semibold;
+          font-size: $font16;
+          line-height: $line-height24;
+        
+        &:hover{
+          border: 1px solid rgba(11,19,43,0.1);      
+          background-color: $bgcolor1;              
+          
+            color: $color2;
+          
+        }
+      }
+      .btn-submit{
+        border: 1px solid rgba(11,19,43,0.1);
+        border-radius: 25px;
+        background-color: $bgcolor1;
+        box-shadow: 0 12px 24px 0 rgba(11,19,43,0.1);
+        padding: 12px 55px;  
+        cursor:pointer;
+        text-align: center;
+        margin-bottom: 0;
+        
+          color:$color2;
+          font-weight: $font-semibold;
+          font-size: $font16;
+          line-height: $line-height24;
+           
+        &:hover{
+          background: $bgcolor5;
+          border-color: $bordercolor5;        
+        }
+        @media only screen and (max-width: $screen375){
+          margin-top:15px;
+        }
+      }
+      p,a{
+        color: rgba(11,19,43,0.6);
+        font-weight: $font-medium;
+        font-size: $font12;
+        line-height: $line-height20;
+        margin-bottom: 40px;
+        a{
+          color: $color1;
+        }
+      }
+    }
+    .btn-groups{
+      @media only screen and (max-width: $screen375){
+        display:block !important;
+      }
+    }
+  }

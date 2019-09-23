@@ -1,0 +1,66 @@
+@import "../../styling/variable.scss";
+
+
+.site-chart{
+  padding: 120px 0;
+  @media only screen and (max-width: $screen900){
+    padding:70px 0;
+  }  
+  @media only screen and (max-width: $screen375){
+    padding:40px 0;
+  }   
+  .chart-box{
+    ul{     
+      box-shadow: 0 12px 32px 0 rgba(0,0,0,0.1); 
+      border-radius:23px;
+      .box-link{
+        text-align: center;
+        padding: 11px 20px;
+        display: block;
+        background: $bgcolor1;
+        &:not(:last-child)        {
+          border-right:1px solid $bordercolor2;
+        }
+        a{
+          color: $color2 !important;
+          line-height: 1;
+          font-size: $font16;
+          text-decoration: none;
+          font-weight: $font-regular;
+          padding: 0;
+          line-height: normal;          
+        }
+        &:first-child{
+          border-top-left-radius: 23px;
+          border-bottom-left-radius: 23px;
+        }
+        &:last-child{
+          border-top-right-radius: 23px;
+          border-bottom-right-radius: 23px;
+        }
+        &:hover{
+          // box-shadow: 0 8px 26px 0 rgba(82, 229, 231, 0.7);
+          box-shadow: 0px 10px 5px rgba(82, 229, 231, 0.2), 0px -10px 5px rgba(82, 229, 231, 0.2);
+          a.active{
+            font-weight:$font-medium;
+            background: transparent;
+          }
+        }
+        @media only screen and (max-width: $screen540){
+            padding:8px 16px;
+            a{
+              font-size: $font14;
+            }
+        }  
+      }
+      .nav-link.active{
+        background-color: transparent;
+      }
+    }
+  }
+}
+.piechart div div div{
+  margin: 0 auto;
+}
+
+  /*-----------------Chart end-----------------*/
